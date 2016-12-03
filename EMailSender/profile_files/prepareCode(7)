@@ -1,0 +1,79 @@
+(function(URLs) {
+	for (var i = 0; i < URLs.length && URLs[i]; i++) {
+		if (!URLs[i].match(/adfox\.ru\/transparent\.gif$/)) {
+			(function(url, img) {
+				img.src = url;
+			})(URLs[i], new Image());
+		}
+	}
+})('https://content.adfox.ru/transparent.gif'.split('|'));
+(function(){
+  var _pr1 = 0,
+  _width = ('240'.indexOf('%')!=-1?'240':parseInt('240')+'px'),
+  contentVersion = 5,
+  plugin = (function(){
+    // From SWFObject v2.2 <http://code.google.com/p/swfobject/>
+    var res, embed;
+	if (typeof navigator.plugins != "undefined" && typeof navigator.plugins["Shockwave Flash"] == "object") {
+	    res = navigator.plugins["Shockwave Flash"].description;
+	    res = (res && !(typeof navigator.mimeTypes != "undefined" && navigator.mimeTypes["application/x-shockwave-flash"] && !navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin))
+	} else if (typeof window.ActiveXObject != "undefined") {
+	    try {
+	        res = new window.ActiveXObject("ShockwaveFlash.ShockwaveFlash").GetVariable("$version");
+	    } catch (e) {
+	        res = false;
+	    }
+	}
+	if (res && (navigator.userAgent.match(/Firefox\/\d+\.\d/) || navigator.userAgent.match(/Chrome\/\d+\.\d/))) {
+		embed = document.createElement('embed');
+		embed.type = 'application/x-shockwave-flash';
+		embed.src = 'data:application/x-shockwave-flash;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==';
+		embed.style.cssText = 'position: absolute; width: 1px; height: 1px; top: -1px; left: 0px;';
+		if (!document.body) {
+			document.getElementsByTagName('html')[0].appendChild(document.createElement('body')).setAttribute('id', 'adfox_body_temp');
+		}
+		document.body.appendChild(embed);
+		try {
+			embed.SetVariable();
+		} catch (e) {
+			res = false;
+		}
+		if (document.getElementById('adfox_body_temp')) {
+			document.body.parentNode.removeChild(document.body);
+		} else {
+			embed.parentNode.removeChild(embed);
+		}
+	}
+	return !!res;
+  })(),
+  adfox_object_565734901 = '',
+  adfox_swf_565734901 = 'https://content.adfox.ru/150819/adfox/497782/1382091.swf',
+  adfox_flashvars_565734901 = 'clickTAG=https%3A//ads%2Eadfox%2Eru/239987/goLink%3Fpr%3Dbvpzxyr%26p5%3Dddzae%26p1%3Dbswrf%26p2%3Dfeyn&event_1=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3Dc79af2b196d28cea%26pm%3Db%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dhtftgz%26p1%3Dbswrf%26p2%3Dfeyn&event_2=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D8605e963b4c4d441%26pm%3Dc%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dezvarlq%26p1%3Dbswrf%26p2%3Dfeyn&event_3=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3Da29ebb5b09b04b3f%26pm%3Dd%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dwvqlrt%26p1%3Dbswrf%26p2%3Dfeyn&event_4=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D45c082e6063a33c7%26pm%3De%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dgrsexav%26p1%3Dbswrf%26p2%3Dfeyn&event_5=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D3093b89ae96f05d9%26pm%3Df%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Devozgmy%26p1%3Dbswrf%26p2%3Dfeyn&event_6=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3Dab345ea3d936f99e%26pm%3Dg%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Ddwmkoev%26p1%3Dbswrf%26p2%3Dfeyn&event_7=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3Df3feef0924b765c0%26pm%3Dh%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dguxgwyq%26p1%3Dbswrf%26p2%3Dfeyn&event_8=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D21d06e46e47203cc%26pm%3Di%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Deiqrofx%26p1%3Dbswrf%26p2%3Dfeyn&event_9=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D5fb5323e04bd0fe5%26pm%3Dj%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dfoyhfdh%26p1%3Dbswrf%26p2%3Dfeyn&event_10=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D596bdcecf2f8b229%26pm%3Dk%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Ddurllky%26p1%3Dbswrf%26p2%3Dfeyn&event_11=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D8157c491f2d87ca3%26pm%3Dl%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Ddmrrreb%26p1%3Dbswrf%26p2%3Dfeyn&event_12=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D189156fd1794bbb5%26pm%3Dm%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dfrenyxx%26p1%3Dbswrf%26p2%3Dfeyn&event_13=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3Dd41e7416f74e64f2%26pm%3Dn%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Ddfgtqxy%26p1%3Dbswrf%26p2%3Dfeyn&event_14=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D9adf3bb1d835e14a%26pm%3Do%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dchguabp%26p1%3Dbswrf%26p2%3Dfeyn&event_15=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3Dd3720d1801baa8ec%26pm%3Dp%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Drhopmi%26p1%3Dbswrf%26p2%3Dfeyn&event_16=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D55feeb5eed1749c5%26pm%3Dq%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dbacrewe%26p1%3Dbswrf%26p2%3Dfeyn&event_17=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3Db64684807ab942ec%26pm%3Dr%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dtbniyc%26p1%3Dbswrf%26p2%3Dfeyn&event_18=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D21dc1c6a27c797ee%26pm%3Ds%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dpflmxu%26p1%3Dbswrf%26p2%3Dfeyn&event_19=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D4c7c3185036e6a94%26pm%3Dt%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Dexwdbdr%26p1%3Dbswrf%26p2%3Dfeyn&event_20=https%3A//ads%2Eadfox%2Eru/239987/event%3Fhash%3D58d9b506eb7a4e2b%26pm%3Du%26lts%3Derqcjlr%26pr%3Dbvpzxyr%26p5%3Dddzae%26rand%3Debihvud%26p1%3Dbswrf%26p2%3Dfeyn&adFoxChannel=adfox_Channel';
+
+  if (plugin) {
+    adfox_object_565734901 += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="240" height="400">';
+    adfox_object_565734901 += '<param name="movie" value="' + adfox_swf_565734901 + '">';
+    adfox_object_565734901 += '<param name="quality" value="high">';
+    adfox_object_565734901 += '<param name="wmode" value="opaque">';
+    adfox_object_565734901 += '<param name="scale" value="Scale">';
+    adfox_object_565734901 += '<param name="allowScriptAccess" value="always">';
+    adfox_object_565734901 += '<param name="bgcolor" value="#ffffff">';
+    adfox_object_565734901 += '<PARAM NAME="menu" VALUE="true">';
+    adfox_object_565734901 += '<PARAM NAME="swLiveConnect" VALUE="true">';
+    adfox_object_565734901 += '<param name="FlashVars" value="' + adfox_flashvars_565734901 + '">';
+    adfox_object_565734901 += '<embed src="'+ adfox_swf_565734901 +'" menu="true" quality="high" wmode="opaque" scale="Scale" bgcolor="#ffffff" allowScriptAccess="always" swLiveConnect="TRUE" width="240" height="400" FlashVars="' + adfox_flashvars_565734901 + '" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">';
+    adfox_object_565734901 += '<\/embed>';
+    adfox_object_565734901 += '<\/object>';
+  } else {
+    adfox_object_565734901 += '<a href="https://ads.adfox.ru/239987/goLink?pr=bvpzxyr&p5=ddzae&p1=bswrf&p2=feyn" target="_blank"><img src="https://content.adfox.ru/150819/adfox/497782/1382091.jpg" width="240" height="400" alt="" border="0"><\/a>';
+  }
+  if (_pr1) {
+      setTimeout(function(){document.close();},100);
+      parent.document.getElementById('AdFox_banner_'+_pr1).innerHTML = adfox_object_565734901;
+      parent.document.getElementById('AdFox_banner_'+_pr1).style.width = _width;
+      parent.document.getElementById('AdFox_banner_'+_pr1).style.margin = '0 auto';
+  } else {
+    document.write('<div style="width: '+_width+'; margin: 0 auto;">'+adfox_object_565734901+'</div>')
+  }
+
+})();
